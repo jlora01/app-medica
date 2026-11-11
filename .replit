@@ -1,0 +1,13 @@
+run = "php -S 0.0.0.0:8000"
+
+[nix]
+channel = "stable-24_05"
+packages = ["php83"]
+
+[[ports]]
+localPort = 8000
+externalPort = 80
+
+[deployment]
+run = ["php", "-S", "0.0.0.0:8000"]
+deploymentTarget = "cloudrun"

@@ -1,4 +1,4 @@
-run = "php -S 0.0.0.0:8000"
+run = "php -S 0.0.0.0:8000 router.php"
 
 [nix]
 channel = "stable-24_05"
@@ -9,5 +9,5 @@ localPort = 8000
 externalPort = 80
 
 [deployment]
-run = ["php", "-S", "0.0.0.0:8000"]
+run = ["php", "-S", "0.0.0.0:8000", "router.php"]
 deploymentTarget = "cloudrun"
